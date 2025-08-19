@@ -10,9 +10,18 @@ body{
     background-size: cover;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+.homepage{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+.homepage a{
+    color: white;
 }
 .login{
     background-color: white;
