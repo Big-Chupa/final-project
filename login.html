@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login" id="hide">
+        <input type="radio" name="check" id="log">
+        <input type="radio" name="check" id="sign">
+        <div class="log">
+            <div class="in">
+                <h2>SIGN UP</h2>
+            </div>
+            <div class="sign">
+                <h2>LOGIN</h2>
+            </div>
+            <input type="radio" name="check" id="log">
+            <input type="radio" name="check" id="sign">
+            <div class="buttons">
+                <!-- <button>Login</button>
+                <button>Sign Up</button> -->
+                <label for="log"><span class="right">Sign Up</span></label>
+                <label for="sign"><span class="left">Login</span></label>
+                <div class="bg"></div>
+            </div>
+        </div>
+        <form action="" class="Login">
+            <p>Join Havenly to save favorites and book apartments.</p>
+            <input type=" text" placeholder="Full Name" required id="regname"> <br>
+            <input type="email" placeholder="Email Address" required id="regemail"> <br>
+            <input type="password" placeholder="Password" required id="regpass"> <br>
+            <a href="">Forgot password?</a> <br>
+            <button type="button" onclick="openPopup()" id="btn">Sign Up</button>
+        </form>
+        <form action="" class="signup">
+            <input type="email" placeholder="Email Address" required> <br>
+            <input type="password" placeholder="Password" required> <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <img src="" alt="">
+        <h2>Thank You!</h2>
+        <p>You have successfully registered with Havenly</p>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+
+    <script>
+        let popup = document.getElementById('popup');
+        let hide = document.getElementById('hide');
+
+
+        function openPopup(){
+        let fullname = document.getElementById('regname').value;
+        let email = document.getElementById('regemail').value;
+        let password = document.getElementById('regpass').value;
+        
+
+        if(fullname === ''){
+            alert('Enter your Full Name')
+        }
+        else if(email === ''){
+            alert('Enter your Email address')
+        }
+        else if(password === ''){
+            alert('Enter your password')
+        }
+         else{
+            popup.classList.add('visible');
+            hide.classList.add('remove');
+            let fullname = document.getElementById('regname').value = '';
+            let email = document.getElementById('regemail').value = '';
+            let password = document.getElementById('regpass').value = '';
+         }
+       }
+       function closePopup(){
+        popup.classList.remove('visible')
+        hide.classList.remove('remove');
+       }
+    </script>
+</body>
+</html>

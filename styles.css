@@ -1,0 +1,541 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.link{
+    background-color: transparent;
+    color: black;
+}
+.btn{
+    /* width: 22%; */
+}
+header{
+    background-color: #fbf5f1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    height: 50px;
+    align-items: center;
+}
+.logo h2{
+    background: url('/IMAGES/Group\ 15.png');
+    color: transparent;
+    background-clip: text;
+}
+.harmburgercontainer{
+    /* background-color: green; */
+    position: fixed;
+    z-index: 2222;
+    right: -40px;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.harmburger{
+    background-color: rgba(0,0,0,1);
+    position: relative;
+    z-index: 2222222;
+    /* top: -10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* right: 10px; */
+    left: 500px;
+    padding-top: 20px;
+    transition: all .3s ease-in-out;
+    color: white;
+    /* height: 100vh; */
+}
+#check{
+    display: none;
+}
+.hammenu{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.hammenu a{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    text-align: center;
+}
+.hammenu a:hover{
+    background-color: #fbf5f1;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,.4);
+    color: black;
+}
+.side{
+    position: absolute;
+    bottom: 10px;
+}
+.side a{
+    background-color: white;
+    color: black;
+}
+.checkbtn, .closecheck{
+    z-index: 33333;
+    /* right: 10px; */
+}
+.closecheck{
+    top: 10px;
+    font-size: 15px;
+    left: 0px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
+.checkbtn{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    transition: all .3s ease-in-out;
+}
+#check:checked ~.harmburger{
+    left: 0px;
+}
+#check:checked ~ .harmburger .checkbtn{
+    display: none;
+}
+.navigations{
+    display: flex;
+    gap: 110px;
+}
+.nav{
+    display: flex;
+    /* background-color: red; */
+    /* align-items: center; */
+    gap: 40px;
+    position: relative;
+}
+.navicons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav label{
+    padding: 6px;
+    /* background-color: green; */
+    border-radius: 5px;
+    display: flex;
+    width: 55px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+    /* color: white; */
+}
+main{
+    /* padding: 0px 40px; */
+}
+#home{
+    height: 89vh;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background:url('/IMAGES/hero\ image\ 1.png'); */
+    /* background-color: red; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+.video::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 2;
+}
+/* #home::before{
+    content: '';
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+} */
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    /* background-color: green; */
+    width: 420px;
+    padding: 0px 10px;
+    position: relative;
+    z-index: 11;
+}
+.home h1{
+    overflow: hidden;
+    /* background-color: red; */
+    padding-right: 3px;
+    color: wheat;
+    /* border-right: .15rem solid #fff; */
+    white-space: nowrap;
+    letter-spacing: .1em;
+    width: 0;
+    text-align: center;
+    animation: typing 5s steps(25,end) forwards 3;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+.home p{
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+.bg{
+   width: 60%; 
+   /* background-color: red; */
+   height: 90%;
+   margin-left: 50px;
+   position: relative;
+}
+.bg img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 10px; */
+    position: relative;
+    top: -55px;
+    z-index: 10;
+}
+.title{
+    text-align: center;
+    margin-top: 15px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #fbf5f1;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+    padding: 10px 10px 25px 10px;
+}
+.card.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+.icon span{
+    font-size: 30px;
+}
+.card p{
+    text-align: center;
+}
+.featured{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: red; */
+    margin-top: 0px;
+    position: relative;
+    top: -55px;
+}
+.featured h1{
+    text-align: center;
+    /* color: white; */
+}
+.card img{
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: width .5s ease-in-out;
+}
+.card img:hover{
+    width: 100%;
+}
+.bottom{
+    padding-bottom: 10px;
+}
+.bottom h3{
+    margin-top: 10px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: -50px;
+}
+footer p a{
+    color: white;
+    background-color: transparent;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px 0px;
+}
+.footer-card{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-card p{
+    text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+}
+.Logo{
+    background: url('/IMAGES/Group\ 15.png');
+    color: transparent;
+    background-clip: text;
+}
+
+/* OUR SERVICES PAGE STYLING */
+
+.maincontainer{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.maincontainer p{
+    text-align: center;
+}
+.service-head{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0px 20px;
+}
+.nomargin{
+    margin-top: 0px;
+}
+
+
+
+/* END OF OUR SERVICES PAGE STYLING */
+
+
+/* APARTMENT STYLING */
+
+.apartment{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+#modal{
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 22;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#modal .modal{
+    width: 300px;
+    height: 160px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.modal form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.modal form input{
+    width: 100%;
+    margin-top: 10px;
+    /* padding: 10px; */
+    border-radius: 5px;
+    height: 25px;
+    border: 1px solid rgba(0,0,0,.4);
+    outline: none;
+}
+::placeholder{
+    padding-left: 5px;
+    font-weight: 600;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    /* background-color: red; */
+    width: 100%;
+}
+.modal button{
+    background-color: white;
+    color: black;
+    /* width: 50%; */
+    text-align: center;
+    border-radius: 5px;
+    height: 25px;
+    border: 1px solid rgba(0,0,0,.4);
+    outline: none;
+}
+.modal button:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px gray;
+}
+.apartments{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+.bm{
+    padding-bottom: 5px;
+    gap: 5px;
+}
+.apartment-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    font-size: 1.2rem;
+}
+.footer-bottom{
+    background-color: #fbf5f1;
+    color: black;
+}
+/* END OF APARTMENT STYLING */
+
+/* AGENT STYLING */
+.agent-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    font-size: 1.2rem;
+}
+.agent-head p{
+    text-align: center;
+}
+.agents{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+/* END OF AGENT STYLING */
+
+@media (max-width: 600px) {
+    .harmburgercontainer{
+        display: flex;
+    }
+    .navigations{
+        display: none;
+    }
+    .home h1{
+        animation: none;
+        width: 100%;
+        white-space: wrap;
+    }
+    .logo{
+        position: absolute;
+        right: 10px;
+    }
+    .apartment-head p{
+        text-align: center;
+    }
+    .modal{
+        /* width: 150px; */
+    }
+}
+@media (max-width: 768px) {
+    /* .harmburgercontainer{
+        display: flex;
+    }
+    .navigations{
+        display: none;
+    }
+    .harmburger{
+        left: 800px;
+    } */
+     header{
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+     }
+     .navigations{
+        gap: 20px;
+     }
+}
