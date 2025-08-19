@@ -30,7 +30,7 @@ header{
     align-items: center;
 }
 .logo h2{
-    background: url('IMAGES/Group%2015.png');
+    background: url('IMAGES/group-15.png');
     color: transparent;
     background-clip: text;
 }
@@ -158,7 +158,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background:url('IMAGES/hero%20image%201.png'); */
+    /* background:url('IMAGES/hero-image-1.png'); */
     /* background-color: red; */
     background-position: center;
     background-size: cover;
@@ -349,7 +349,7 @@ footer a:hover{
     text-align: center;
 }
 .Logo{
-    background: url('IMAGES/Group%2015.png');
+    background: url('IMAGES/group-15.png');
     color: transparent;
     background-clip: text;
 }
