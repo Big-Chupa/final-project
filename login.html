@@ -29,15 +29,35 @@
         </div>
         <form action="" class="Login">
             <p>Join Havenly to save favorites and book apartments.</p>
-            <input type=" text" placeholder="Full Name" required id="regname"> <br>
-            <input type="email" placeholder="Email Address" required id="regemail"> <br>
-            <input type="password" placeholder="Password" required id="regpass"> <br>
+            <!-- <input type=" text" placeholder="Full Name" required id="regname"> <br> -->
+             <div class="formgroup">
+                <input type="text" placeholder="" required id="regname">
+                <label for="name">fullname</label>
+             </div>
+             <div class="formgroup">
+                <input type="email" placeholder="" required id="regemail">
+                <label for="name">email</label>
+             </div>
+             <div class="formgroup">
+                <input type="password" placeholder="" required id="regpass">
+                <label for="name">password</label>
+             </div>
+            <!-- <input type="email" placeholder="Email Address" required id="regemail"> <br> -->
+            <!-- <input type="password" placeholder="Password" required id="regpass"> <br> -->
             <a href="">Forgot password?</a> <br>
             <button type="button" onclick="openPopup()" id="btn">Sign Up</button>
         </form>
         <form action="" class="signup">
-            <input type="email" placeholder="Email Address" required> <br>
-            <input type="password" placeholder="Password" required> <br>
+            <!-- <input type="email" placeholder="Email Address" required> <br>
+            <input type="password" placeholder="Password" required> <br> -->
+            <div class="formgroup">
+                <input type="email" placeholder="" required>
+                <label for="name">email</label>
+             </div>
+             <div class="formgroup">
+                <input type="password" placeholder="" required>
+                <label for="name">password</label>
+             </div>
             <button type="submit">Login</button>
         </form>
     </div>
