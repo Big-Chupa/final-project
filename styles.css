@@ -41,7 +41,7 @@ header{
     right: -40px;
     top: 0px;
     right: 0px;
-    height: 100vh;
+    height: 450px;
     width: 100%;
     /* display: none; */
     visibility: hidden;
@@ -60,7 +60,7 @@ header{
     padding-top: 20px;
     transition: all .3s ease-in-out;
     color: white;
-    /* height: 100vh; */
+    /* height: 50vh; */
 }
 #check{
     display: none;
