@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Forms</title>
+    <style>
+        *{
+            text-decoration: none;
+            color: white;
+        }
+        body{
+            background-color: grey;
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+            height: 500px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        .header{
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .chat-m{
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .message{
+            margin: 8px 0px;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 75%;
+        }
+        .message.user{
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+        .message.support{
+            background-color: #e9ecef;
+            color: black;
+            align-self: flex-start;
+        }
+        .chat-input{
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input input{
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chat-input button{
+            margin-left: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .chat-input button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>Isah</td>
+            <td>SS1</td>
+            <td>30</td>
+            <td>Ilorin</td>
+        </tr>
+        <tr>
+            <td>Abubakar</td>
+            <td>SS1</td>
+            <td>29</td>
+            <td>Ilorin</td>
+        </tr>
+        <tr>
+            <td>Chupa</td>
+            <td>Primary 3</td>
+            <td>10</td>
+            <td>Ilorin</td>
+        </tr>
+    </table>
+
+
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" required> <br>
+        <label for="class">Class:</label>
+        <input type="number" required> <br>
+        <label for="age">Age:</label>
+        <input type="password" required> <br>
+        <label for="address">Address:</label>
+        <input type="text" required> <br>
+        <label for="">Password:</label>
+        <input type="password">
+    </form> -->
+
+    <!-- <div class="container">
+        <span class="qty">-</span><span id="count">1</span><span class="qty">+</span>
+    </div> -->
+    <div class="container">
+        <div class="header">
+            <h2>CUSTOMER CARE</h2>
+            <a href="index.html">Back to Home-page</a>
+        </div>
+        <div class="chat-m" id="chatm"></div>
+        <div class="chat-input">
+            <input type="text" id="input">
+            <button id="btn">send</button>
+        </div>
+    </div>
+
+
+    <script>
+        let chatm = document.getElementById('chatm');
+        let input = document.getElementById('input');
+        let btn = document.getElementById('btn');
+
+
+        function addMessage(text, sender){
+            let messagediv= document.createElement('div');
+            messagediv.classList.add("message", sender);
+            messagediv.innerHTML = text;
+
+            chatm.appendChild(messagediv);
+            chatm.scrollTop = chatm.scrollHeight;
+        }
+
+        btn.addEventListener('click', () =>{
+            let text = input.value.trim();
+            if(text !== ''){
+                addMessage(text, 'user')
+                input.value = '';
+
+                setTimeout(()=>{
+                    let response = '';
+                    if(text.toLowerCase().includes('hello')) {
+                        response = 'Hello! How can I help you today?';
+                    } else if(text.toLowerCase().includes('price')) {
+                        response = 'Our prices are very affordable. What product are you interested in?';
+                    } else if(text.toLowerCase().includes('bye')) {
+                        response = 'Goodbye! Have a great day!';
+                    } else {
+                        response = 'Thanks for reaching out, we will get back to you soon';
+                    }
+                    addMessage(response, 'support');
+                }, 1000)
+            }
+        })
+
+        input.addEventListener('keypress', (e) =>{
+            if(e.key === 'enter'){
+                btn.click();
+            }
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
