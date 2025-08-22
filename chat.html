@@ -64,6 +64,8 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            color: black;
+            outline: none;
         }
         .chat-input button{
             margin-left: 10px;
@@ -175,7 +177,7 @@
         })
 
         input.addEventListener('keypress', (e) =>{
-            if(e.key === 'enter'){
+            if(e.key === 'Enter'){
                 btn.click();
             }
         })
