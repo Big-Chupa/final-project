@@ -23,6 +23,9 @@ a{
     color: black;
     border: 2px solid black;
 }
+.log:hover{
+    border: none;
+}
 a::after{
     content: "";
     background-color: rgba(0,0,0,.4);
