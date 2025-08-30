@@ -71,7 +71,7 @@ header{
     right: -40px;
     top: 0px;
     right: 0px;
-    height: 510px;
+    height: 100%;
     width: 100%;
     /* display: none; */
     visibility: hidden;
@@ -87,9 +87,10 @@ header{
     align-items: center;
     /* right: 10px; */
     left: 500px;
-    padding-top: 20px;
+    padding-top: 50px;
     transition: all .3s ease-in-out;
     color: white;
+    width: 100%;
     /* height: 50vh; */
 }
 #check{
@@ -116,7 +117,7 @@ header{
 }
 .side{
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
 }
 .side a{
     background-color: white;
@@ -132,7 +133,7 @@ header{
     left: 0px;
     position: absolute;
     border-radius: 5px;
-    background-color: red;
+    /* background-color: red; */
     color: white;
     padding: 5px;
 }
@@ -360,6 +361,9 @@ footer p a{
     color: white;
     background-color: transparent;
 }
+footer p a{
+    display: block;
+}
 footer a:hover{
     text-decoration: underline;
 }
@@ -536,7 +540,7 @@ footer a:hover{
     }
     .harmburger{
         visibility: visible;
-        height: 95%;
+        height: 100%;
     }
     .checkbtn{
         visibility: visible;

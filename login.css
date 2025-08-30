@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 body{
-    background: url('IMAGES/bgservice.jpg');
+    background: #fbf5f1;
     background-position: center;
     background-size: cover;
     height: 100vh;
